@@ -47,7 +47,7 @@ namespace StudentsManager.Controllers
             }
             return RedirectToAction("index");
         }
-        public ActionResult Detail(int id)
+        public ActionResult Details(int id)
         {
             var data = _context.Students.Where(x => x.StudentId == id).FirstOrDefault(x => x.StudentId == id);
             return View(data);
